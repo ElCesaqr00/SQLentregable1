@@ -22,5 +22,6 @@ select * from posts inner join users
 on posts.creator_id = users.id;
 
 select * from posts inner join likes
-on posts.creator_id = likes.user_id;
+on posts.id = likes.post_id inner join users
+on likes.user_id = users.id;
 
